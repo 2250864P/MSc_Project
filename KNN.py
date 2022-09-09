@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 df = pd.read_csv("D:/PhD/emotional behaviors/code/svm/ecg1.csv",header=None)
 np.array(df)
 #2.划分数据与标签
-x,y=np.split(df,indices_or_sections=(8,),axis=1) #x为数据，y为标签
+x,y=np.split(df,indices_or_sections=(8,),axis=1) 
 
 
 
