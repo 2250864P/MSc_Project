@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 
 df = pd.read_csv("D:/PhD/emotional behaviors/code/svm/ecg1.csv",header=None)
 np.array(df)
-#2.划分数据与标签
+# 2.sectioning data and labelling
 x,y=np.split(df,indices_or_sections=(8,),axis=1) 
 
 
@@ -18,7 +18,7 @@ train_data,test_data,train_label,test_label =train_test_split(x,y, random_state=
 
 
 
-#3.训练svm分类器
+# 3.train SVM
 
 
 
@@ -28,7 +28,7 @@ classifier.fit(train_data,train_label.values.ravel()) #ravel函数在降维时�
 
 
 
-print("训练集：",classifier.score(train_data,train_label))
-print("测试集：",classifier.score(test_data,test_label))
+print("train：",classifier.score(train_data,train_label))
+print("test：",classifier.score(test_data,test_label))
 #print(test_label)
-#print("测试集：",classifier.predict_proba(test_data))
+#print("test：",classifier.predict_proba(test_data))
